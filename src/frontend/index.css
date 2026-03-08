@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cabinet Grotesk - Display font */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Outfit - Body font */
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Warm off-white background */
+    --background: 0.978 0.004 80;
+    --foreground: 0.18 0.012 50;
+
+    --card: 0.995 0.002 80;
+    --card-foreground: 0.18 0.012 50;
+
+    --popover: 0.995 0.002 80;
+    --popover-foreground: 0.18 0.012 50;
+
+    /* Near-black primary */
+    --primary: 0.18 0.012 50;
+    --primary-foreground: 0.978 0.004 80;
+
+    --secondary: 0.948 0.008 80;
+    --secondary-foreground: 0.28 0.012 50;
+
+    --muted: 0.948 0.008 80;
+    --muted-foreground: 0.52 0.012 50;
+
+    --accent: 0.93 0.012 80;
+    --accent-foreground: 0.18 0.012 50;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.89 0.012 80;
+    --input: 0.89 0.012 80;
+    --ring: 0.18 0.012 50;
+
+    /* Macro colors */
+    --protein: 0.65 0.12 195;
+    --protein-bg: 0.93 0.04 195;
+    --carbs: 0.72 0.15 75;
+    --carbs-bg: 0.95 0.04 75;
+    --fat: 0.65 0.18 15;
+    --fat-bg: 0.95 0.04 15;
+    --calories: 0.45 0.02 50;
+
+    /* Chart colors */
+    --chart-1: 0.65 0.12 195;
+    --chart-2: 0.72 0.15 75;
+    --chart-3: 0.65 0.18 15;
+    --chart-4: 0.55 0.14 280;
+    --chart-5: 0.62 0.16 145;
+
+    --sidebar: 0.95 0.006 80;
+    --sidebar-foreground: 0.18 0.012 50;
+    --sidebar-primary: 0.18 0.012 50;
+    --sidebar-primary-foreground: 0.978 0.004 80;
+    --sidebar-accent: 0.93 0.008 80;
+    --sidebar-accent-foreground: 0.18 0.012 50;
+    --sidebar-border: 0.89 0.012 80;
+    --sidebar-ring: 0.18 0.012 50;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Outfit", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Cabinet Grotesk", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Cabinet Grotesk", sans-serif;
+  }
+
+  .font-body {
+    font-family: "Outfit", sans-serif;
+  }
+}
